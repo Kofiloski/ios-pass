@@ -45,6 +45,15 @@ jobs:
           path: .tooling/ios-ai-ui-check
           persist-credentials: false
 
+      - name: Fetch and validate the exact release comparison before building
+        run: |
+          git fetch --no-tags --depth=1 https://github.com/protonpass/ios-pass.git "$SOURCE_BASE" "$SOURCE_HEAD"
+          python3 .tooling/ios-ai-ui-check/scripts/ai_ui_contract.py prepare-change-context \
+            --repo-root "$GITHUB_WORKSPACE" \
+            --artifacts-dir artifacts/proton-pass/comparison-preflight \
+            --base-ref "$SOURCE_BASE" --head-ref "$SOURCE_HEAD" \
+            --release-notes-path .github/ai-ui/release-notes-1.23.0.md
+
       - name: Boot the selected Simulator
         run: |
           ./.tooling/ios-ai-ui-check/scripts/boot-simulator.sh "$RUNNER_TEMP/skills-simulator.env"
