@@ -1,0 +1,68 @@
+{
+  "name": "Proton Pass welcome and sign-in round trip",
+  "steps": [
+    {
+      "action": "launch",
+      "arguments": [
+        "RunningInUITests",
+        "-AppleLanguages",
+        "(en)",
+        "-AppleLocale",
+        "en_US"
+      ]
+    },
+    {
+      "action": "assertVisible",
+      "label": "Create an account",
+      "timeout": 20
+    },
+    {
+      "action": "assertVisible",
+      "label": "Sign in",
+      "timeout": 20
+    },
+    {
+      "action": "screenshot",
+      "output": "welcome-controls.png"
+    },
+    {
+      "action": "tap",
+      "label": "Sign in",
+      "timeout": 20
+    },
+    {
+      "action": "assertVisible",
+      "id": "LoginViewController.titleLabel",
+      "timeout": 20
+    },
+    {
+      "action": "assertVisible",
+      "id": "LoginViewController.loginTextField.textField",
+      "timeout": 20
+    },
+    {
+      "action": "screenshot",
+      "output": "sign-in-form.png"
+    },
+    {
+      "action": "tap",
+      "id": "UINavigationItem.leftBarButtonItem",
+      "timeout": 20
+    },
+    {
+      "action": "assertVisible",
+      "label": "Create an account",
+      "timeout": 20
+    },
+    {
+      "action": "assertVisible",
+      "label": "Sign in",
+      "timeout": 20
+    },
+    {
+      "action": "screenshot",
+      "output": "welcome-return.png"
+    }
+  ],
+  "description": "Verify the real signed-out welcome screen, open the native sign-in form, then close it and return. No account or provider API key is needed; this baseline does not cover release-specific authenticated features."
+}

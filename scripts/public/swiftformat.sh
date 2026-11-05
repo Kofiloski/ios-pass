@@ -2,6 +2,11 @@
 
 PATH=/opt/homebrew/bin/:$PATH
 
+if [[ "${SKIP_SWIFTFORMAT:-0}" == "1" ]]; then
+  echo "Skipping source formatting for the public Simulator check."
+  exit 0
+fi
+
 if which swiftformat >/dev/null; then
   swiftformat .
 else

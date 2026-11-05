@@ -14,11 +14,6 @@ LOCAL_PACKAGE_PATH="$SCRIPT_DIR/../../LocalPackages/PassRustCore"
 
 URL="https://github.com/protonpass/proton-pass-common/releases/download/${VERSION}/PassRustCode.swift.zip"
 
-if ! command -v wget &> /dev/null; then
-    echo "wget is not installed, installing via Homebrew"
-    brew install wget
-fi
-
 # Check if the current local package is using the right version
 LOCAL_VERSION_PATH="${LOCAL_PACKAGE_PATH}/VERSION"
 if [ -e "$LOCAL_VERSION_PATH" ]; then
@@ -38,9 +33,8 @@ echo "Creating tmp directory if not exist"
 mkdir -p $TMP_DIR_PATH
 
 echo -e "Downloading artifact\n"
-wget -q --progress=bar:force -N -P $TMP_DIR_PATH $URL
-
 ARTIFACT_PATH="${TMP_DIR_PATH}/PassRustCode.swift.zip"
+curl --fail --location --retry 3 --output "$ARTIFACT_PATH" "$URL"
 
 echo "Checksum verification for artifact"
 echo -n "${HASH}  ${ARTIFACT_PATH}" | shasum -a 256 -c

@@ -59,6 +59,8 @@ vendor/bundle/
 !*.xcodeproj/project.pbxproj
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
+!*.xcodeproj/project.xcworkspace/
+!ProtonPass.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
 /*.gcno
 # End of https://www.gitignore.io/api/xcode,osx
 
@@ -70,6 +72,8 @@ vendor/bundle/
 
 tmp/
 LocalPackages/PassRustCore
+.derivedData/
+artifacts/
 
 # ==================================================================
 # AI files

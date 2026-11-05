@@ -1,0 +1,61 @@
+{
+  "app_target": "iOS",
+  "customizable_files": [
+    ".github/ai-ui/planner-context.md",
+    ".github/ai-ui/verify-primary-flow.json"
+  ],
+  "file_hashes": {
+    ".github/ai-ui/planner-context.md": "95718b67b52c60870e239501c2a8f3108cc448899eb87d0fcc656bcb04b7faa7",
+    ".github/ai-ui/verify-primary-flow.json": "7ba56b1b347905f84db0365f852f43e7d7305bc3c30a994b7ed389e113d5b841",
+    "Tests/SkillsPublicUITests/ScenarioRunnerUITests.swift": "372b9bbb66308b78b564de31c95156f42b3f12b52c411c403b7834e505583072",
+    "scripts/ai_ui_contract.py": "b87a47cd77f18d7dcfd666bcc53acd6ea83f844d2440056712c43dc2ad151af4",
+    "scripts/ai_ui_planner.py": "37be25110912171e006f55b3a0e9eb1bf5dd5d45ff3e559bda6f89a1a57dbad3",
+    "scripts/local-ai-ui-check.sh": "7356efca97513c690e3c331b276acaf2868338ff596b764f8c2542e7a2f8a703",
+    "scripts/plan-ai-ui-scenario.sh": "a9aaa67d2f14c28ebf7e712d69722e7c318f0fe09d1b608de6454c8d60c38e46",
+    "scripts/run-ai-ui-scenario.sh": "691cf489b996116c3e3e98d6cde95d7c286796933d9b04c611614c9f034ee0ce"
+  },
+  "generated_at_utc": "2026-11-05T21:45:32Z",
+  "generated_files": [
+    "Tests/SkillsPublicUITests/ScenarioRunnerUITests.swift",
+    "scripts/run-ai-ui-scenario.sh",
+    "scripts/local-ai-ui-check.sh",
+    "scripts/plan-ai-ui-scenario.sh",
+    "scripts/ai_ui_contract.py",
+    "scripts/ai_ui_planner.py",
+    ".github/ai-ui/scaffold-manifest.json",
+    ".github/ai-ui/planner-context.md",
+    ".github/ai-ui/verify-primary-flow.json"
+  ],
+  "hash_algorithm": "sha256",
+  "hashed_files_excluded": [
+    ".github/ai-ui/scaffold-manifest.json"
+  ],
+  "managed_files": [
+    "Tests/SkillsPublicUITests/ScenarioRunnerUITests.swift",
+    "scripts/run-ai-ui-scenario.sh",
+    "scripts/local-ai-ui-check.sh",
+    "scripts/plan-ai-ui-scenario.sh",
+    "scripts/ai_ui_contract.py",
+    "scripts/ai_ui_planner.py",
+    ".github/ai-ui/scaffold-manifest.json"
+  ],
+  "manifest_version": 2,
+  "planner_context_path": ".github/ai-ui/planner-context.md",
+  "planner_context_template": null,
+  "planner_context_template_mode": "none",
+  "project_path": "ProtonPass.xcodeproj",
+  "refresh_command": "python3 \"${IOS_AI_UI_CHECK_ROOT:?Set IOS_AI_UI_CHECK_ROOT to the ios-ai-ui-check checkout}/scripts/refresh-scaffold.py\" --repo-root .",
+  "repo_root": ".",
+  "scaffold_manifest_path": ".github/ai-ui/scaffold-manifest.json",
+  "scenario_path": ".github/ai-ui/verify-primary-flow.json",
+  "scenario_template": ".github/ai-ui/verify-primary-flow.json",
+  "scenario_template_mode": "generated-customizable-file",
+  "scheme": "SkillsLocalBuild",
+  "simulator_name": "Ice Cubes Skills Test",
+  "simulator_runtime": "27.0",
+  "source_commit": "4a233e8afe943bc8741f920a082723e2db9b26ee",
+  "source_repo": "Kofiloski/ios-ai-ui-check",
+  "tool": "ios-ai-ui-check",
+  "ui_test_target": "SkillsPublicUITests",
+  "workflow_generated": false
+}
