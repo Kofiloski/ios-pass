@@ -4,6 +4,8 @@ Independent skills showcase based on Proton Pass 1.23.0. Native Simulator UI che
 use a deterministic scenario and need no LLM API key. See the
 [reproduction guide and coverage limits](docs/skills-showcase.md).
 
+Verified hosted run: [1 UI check and 5 PRF model tests passed](https://github.com/Kofiloski/ios-pass/actions/runs/42133167432).
+
 This repository contains the source code for the Proton Pass iOS application. 
 
 * [Installation](#installation)
