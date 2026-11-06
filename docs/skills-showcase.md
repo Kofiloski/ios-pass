@@ -55,7 +55,9 @@ On November 5, 2026, Xcode 27.1 on an iPhone 18 Pro Simulator running iOS 27.0
 produced a passing app test build, one passing UI scenario, and five passing PRF
 model tests (zero failures or skips). The UI action scripts captured three
 screenshots, video, the exact tag comparison and an XCTest result bundle.
-GitHub-hosted execution is a separate check.
+The [GitHub-hosted run](https://github.com/Kofiloski/ios-pass/actions/runs/42133167432)
+also passed: one UI test and five PRF model tests, with zero failures/skips.
+Downloaded result bundles verify both counts and the exact source comparison.
 
 ## Read the results
 

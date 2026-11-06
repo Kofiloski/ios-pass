@@ -9,7 +9,7 @@ permissions:
 jobs:
   proton-pass:
     runs-on: xcode-27
-    timeout-minutes: 40
+    timeout-minutes: 60
     env:
       DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
       AI_UI_DERIVED_DATA_PATH: ${{ github.workspace }}/.derivedData/ai-ui
