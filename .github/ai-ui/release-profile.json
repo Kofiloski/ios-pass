@@ -1,0 +1,29 @@
+{
+  "upstream": "protonpass/ios-pass",
+  "source_seed": "bd22de62d53815d04feeee2da91c9478e71530a0",
+  "tag_pattern": "^(\\d+)\\.(\\d+)\\.(\\d+)$",
+  "project": "ProtonPass.xcodeproj",
+  "scheme": "SkillsLocalBuild",
+  "target": "SkillsPublicUITests",
+  "runner": "scripts/run-release-ui-scenario.sh",
+  "build_command": [
+    "bash",
+    "scripts/skills-build-for-testing.sh"
+  ],
+  "prepare_commands": [],
+  "launch_presets": [
+    {
+      "action": "launch",
+      "arguments": [
+        "RunningInUITests",
+        "-AppleLanguages",
+        "(en)",
+        "-AppleLocale",
+        "en_US"
+      ]
+    }
+  ],
+  "max_tests": 3,
+  "simulator_name": "iPhone 18 Pro",
+  "simulator_runtime": "27.0"
+}

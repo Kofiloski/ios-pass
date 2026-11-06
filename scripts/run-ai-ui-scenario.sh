@@ -6,6 +6,9 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+if [[ "${AI_UI_RELEASE_MODE:-0}" == "1" ]]; then
+  exec bash "$ROOT_DIR/scripts/run-release-ui-scenario.sh" "$@"
+fi
 DEFAULT_PROJECT_RELATIVE_PATH=ProtonPass.xcodeproj
 DEFAULT_SCHEME=SkillsLocalBuild
 DEFAULT_UI_TEST_TARGET=SkillsPublicUITests
