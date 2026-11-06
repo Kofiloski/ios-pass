@@ -1,10 +1,21 @@
-# Proton Pass
+# Proton Pass: iOS UI Check showcase
 
-Independent skills showcase based on Proton Pass 1.23.0. Native Simulator UI checks
-use a deterministic scenario and need no LLM API key. See the
-[reproduction guide and coverage limits](docs/skills-showcase.md).
+[![Native UI check](https://github.com/Kofiloski/ios-pass/actions/workflows/skills-public-check.yml/badge.svg?branch=skills-showcase&event=workflow_dispatch)](https://github.com/Kofiloski/ios-pass/actions/workflows/skills-public-check.yml)
 
-Verified hosted run: [1 UI check and 5 PRF model tests passed](https://github.com/Kofiloski/ios-pass/actions/runs/42133167432).
+This independent fork demonstrates the [ios-ai-ui-check action](https://github.com/Kofiloski/ios-ai-ui-check) against the real [Proton Pass app](https://github.com/protonpass/ios-pass). The workflow builds the app, invokes the released v0.6.0 action, and collects native XCTest results and video.
+
+- **Tested flow:** Welcome screen → native sign-in form → welcome screen.
+- **Verified run:** [Passed on November 6, 2026](https://github.com/Kofiloski/ios-pass/actions/runs/42133167432). 1 UI test passed through our action; 5 PRF unit tests passed in a separate workflow step. Zero failures or skips.
+- **Coverage:** Includes release context for 1.22.1 → 1.23.0. Coverage is the signed-out UI flow and PRF model logic; authenticated release features remain unverified.
+
+The manual workflow uses a checked-in scenario. No AXe or model API key is required; live AI planning is not exercised by this example.
+
+[Run in GitHub Actions](https://github.com/Kofiloski/ios-pass/actions/workflows/skills-public-check.yml) · [Reproduce and inspect coverage](docs/skills-showcase.md) · [Get the toolkit](https://github.com/Kofiloski/ios-release-quality-toolkit)
+
+This fork is not affiliated with or endorsed by the upstream project. Its source attribution and license are retained below.
+
+<details>
+<summary>Upstream app documentation</summary>
 
 This repository contains the source code for the Proton Pass iOS application. 
 
@@ -147,3 +158,5 @@ For a detailed list of changes in each version of the project, please refer to t
 The code and data files in this distribution are licensed under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. See <https://www.gnu.org/licenses/> for a copy of this license.
 
 See [LICENSE](LICENSE) file
+
+</details>
