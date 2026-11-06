@@ -2,6 +2,7 @@
 summary: Reproduce the public Proton Pass Simulator checks and understand their release-coverage limits.
 read_when:
   - Running or changing the skills showcase workflow
+  - Comparing upstream releases and reviewing generated UI test reports
   - Interpreting the evidence for Proton Pass 1.23.0
 ---
 
@@ -117,3 +118,9 @@ The app profile in `.github/ai-ui/release-profile.json` owns stable tag filters,
 the source seed for the harness overlay, reviewed launch presets, and build/test
 configuration. A changed upstream project may require a reviewed profile update.
 No live provider generation or full release-flow execution has been verified yet.
+
+The [credential-gate run on November 6, 2026](https://github.com/Kofiloski/ios-pass/actions/runs/42296867037)
+resolved 1.22.1 → 1.23.0, skipped the macOS/planning/execution jobs, and
+[archived a blocked report and evidence](https://github.com/Kofiloski/ios-pass/releases/tag/ui-check-94f7317ae4b18a6ae622).
+The final coverage gate failed deliberately. This verifies missing-key handling
+and historical publication; it does not establish generated UI coverage.
