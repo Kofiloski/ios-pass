@@ -1,5 +1,7 @@
 # Proton Pass: iOS UI Check showcase
 
+Frozen integration reference: the verified native baseline and manual workflows remain available. Recurring upstream release checks are paused; [DuckDuckGo is the active flagship](https://github.com/Kofiloski/apple-browsers).
+
 [![Native UI check](https://github.com/Kofiloski/ios-pass/actions/workflows/skills-public-check.yml/badge.svg?branch=skills-showcase&event=workflow_dispatch)](https://github.com/Kofiloski/ios-pass/actions/workflows/skills-public-check.yml)
 
 This independent fork demonstrates the [ios-ai-ui-check action](https://github.com/Kofiloski/ios-ai-ui-check) against the real [Proton Pass app](https://github.com/protonpass/ios-pass). The workflow builds the app, invokes the released v0.6.0 action, and collects native XCTest results and video.
@@ -14,7 +16,9 @@ The baseline workflow uses a checked-in scenario. No AXe or model API key is req
 
 This fork is not affiliated with or endorsed by the upstream project. Its source attribution and license are retained below.
 
-Release-diff generation is configured separately in [Release diff UI regressions](.github/workflows/skills-release-regression.yml). It requires provider credentials and an explicit scheduling opt-in; [setup and verification status](docs/skills-showcase.md#release-diff-regressions). [Missing-key handling and report archival were verified](https://github.com/Kofiloski/ios-pass/actions/runs/42296867037); live generated UI coverage remains unverified.
+Manual release-diff generation remains configured in [Release diff UI regressions](.github/workflows/skills-release-regression.yml). It requires provider credentials and has no scheduled trigger; [setup and verification status](docs/skills-showcase.md#release-diff-regressions). [Missing-key handling and report archival were verified](https://github.com/Kofiloski/ios-pass/actions/runs/42296867037); live generated UI coverage remains unverified.
+
+[Permanent baseline evidence](https://github.com/Kofiloski/ios-pass/releases/tag/skills-baseline-42133167432) includes native results, logs, video and exact source identities beyond Actions retention.
 
 <details>
 <summary>Upstream app documentation</summary>

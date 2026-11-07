@@ -99,8 +99,9 @@ from another provider. No model keys are currently configured in this fork.
 
 Run the workflow manually first. Missing credentials or incomplete planning,
 builds or native execution produce a blocked/failing report; there is no fixed
-baseline fallback. After verifying a live run, set repository variable
-`ENABLE_RELEASE_CHECKS=true` to enable the daily upstream poll. First discovery
+baseline fallback. This frozen reference has no scheduled trigger and keeps
+`ENABLE_RELEASE_CHECKS=false`. Resuming recurring checks requires a reviewed
+schedule change as well as the variable and a verified live planner run. First discovery
 starts at the latest pair instead of backfilling the entire catalog. Subsequent
 new tags, including hotfixes, enter a persisted queue. Manual `head_tag` and
 `base_tag` inputs replay historical pairs; older toolchains or harness conflicts
@@ -124,3 +125,20 @@ resolved 1.22.1 → 1.23.0, skipped the macOS/planning/execution jobs, and
 [archived a blocked report and evidence](https://github.com/Kofiloski/ios-pass/releases/tag/ui-check-94f7317ae4b18a6ae622).
 The final coverage gate failed deliberately. This verifies missing-key handling
 and historical publication; it does not establish generated UI coverage.
+
+## Maintenance status
+
+This fork became a frozen integration reference on November 7, 2026. Its source
+snapshot and historical native evidence remain available, and manual checks can
+still be run. The scheduled release trigger is removed and
+`ENABLE_RELEASE_CHECKS=false`; current upstream releases are not followed
+automatically. DuckDuckGo is the active behavioral flagship. This does not
+reclassify the existing baseline as generated release coverage.
+
+## Permanent native evidence
+
+The [verified baseline bundle](https://github.com/Kofiloski/ios-pass/releases/tag/skills-baseline-42133167432) preserves the
+original native result bundles, scenario, logs and recording, with source, harness
+and action revisions. Asset hashes and the native result counts were verified
+before publication. These fixed baseline records remain separate from live
+model-generated release tests.
